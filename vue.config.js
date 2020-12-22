@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: 'news-proj.github.io'
+    publicPath: 'news-template'
 }
