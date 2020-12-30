@@ -7,7 +7,13 @@ import firebase from 'firebase'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import(/*webpackChunkName: "login"*/ '../views/Login.vue'),
 
+
+  },
   {
     path: '/home',
     name: 'Home',
@@ -38,13 +44,7 @@ const routes = [
     }
   },
 
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import(/*webpackChunkName: "login"*/ '../views/Login.vue'),
-
-
-  },
+  
   {
     path: '/signup',
     name: 'Signup',
