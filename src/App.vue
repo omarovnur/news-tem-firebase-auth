@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <my-nav v-if="isAuth"></my-nav>
+    <my-nav v-if="isAuth" v-show="keep"></my-nav>
     <router-view></router-view>
   </div>
 </template>
@@ -19,6 +19,10 @@ export default {
     };
   },
   methods: {
+    keep(){
+      alert("Please Login to continue!")
+    },
+
     isAuthFunc() {
       this.isAuth = false;
       if (
